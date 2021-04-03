@@ -32,10 +32,33 @@ int lastIndex(int input[], int size, int x) {
 }
 
 
+int lastIndexFromBack(int input[], int size, int x) {
+
+	// This function is used for calculating the last index from back
+
+	// Base case
+	if(size == 0) {
+		return -1;
+	}
+
+	int index = lastIndexFromBack(input, size-1, x);
+
+	if(input[size] == x) {
+		return size;
+	}
+	
+	if(index != -1) {
+		return index;
+	}
+
+	return -1;
+}
+
+
 int main() {
 	int input[] = {9, 8, 10, 8};
 	int size = 4;
-	int x = 10;
+	int x = 8;
 
-	cout << lastIndex(input, size, x);
+	cout << lastIndexFromBack(input, size, x);
 }
