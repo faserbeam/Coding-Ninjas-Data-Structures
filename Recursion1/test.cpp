@@ -1,20 +1,18 @@
 #include <iostream>
+#include <string.h>
 using namespace std;
 
-void print(int n){
-	cout << n << endl;
-    if(n < 0){
-        return;
-    }
-    if(n == 0){
-        cout << n << " ";
-        return;
-    }
-    print(--n);
-    cout << n << " ";
+int countSize(char input[]) {
+	int size = 0;
+	for(int i=0; input[i]!='\0'; i++) {
+		size++;
+	}
+	return size;
 }
 
 int main() {
-    int num = 3;
-    print(num);
+	char arr[50];
+	cin >> arr;
+
+	cout << countSize(arr);
 }
