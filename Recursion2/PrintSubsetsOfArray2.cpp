@@ -19,7 +19,7 @@ void helper(int input[], int start, int size, int output[], int m) {
 	int i;
 	for(i = 0; i<m; i++) {
 		smallOutput[i] = output[i];
-		cout << output[i] << endl;
+		//cout << output[i] << endl;
 	}
 
 	smallOutput[i] = input[start];
